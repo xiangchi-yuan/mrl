@@ -11,7 +11,6 @@ The script provides detailed pre-merge statistics and implements several advance
 * **Advanced Merge Strategies**:
     * **ARM**: Averages task vectors only where changes actually occurred, reducing noise from unchanged models.
     * **ARM-Rescale (v1 & v2)**: Dynamically scales (boosts) the weights of non-overlapping parameters based on the model's global overlap ratio. 
-    * **ARM-TIES**: Implements the TIES-Merging algorithm (Trim, Elect Sign, Disjoint Merge) to handle interference.
     * **ARM-Unique**: Extracts and merges parameter changes that are unique to a specific target model.
 * **Auto-Save**: Automatically saves the merged model weights and the corresponding tokenizer.
 
