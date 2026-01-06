@@ -28,7 +28,7 @@ def load_state_dict(model_path, device="cpu"):
 
 def compute_overlap_stats_elementwise_n(base_sd, task_sds, threshold=1e-5):
     n = len(task_sds)
-    assert n >= 1, "task_sds 至少需要一个任务模型"
+    assert n >= 1, "task_sds at least one model"
 
     common_keys = set(base_sd.keys())
     for sd in task_sds:
@@ -101,9 +101,9 @@ def compute_task_vectors(base_sd, task_sds):
 
 def agentic_reinforcement_merge_extract_unique(base_sd, task_vecs, target_index, threshold=1e-5):
     n = len(task_vecs)
-    assert n >= 1, "需要至少一个任务向量"
+    assert n >= 1, "task_sds at least one model"
     if target_index < 0 or target_index >= n:
-        raise ValueError(f"target_index {target_index} 超出范围 (共有 {n} 个模型)")
+        raise ValueError(f"target_index {target_index} out of maximum models")
 
     merged_sd = {}
 
@@ -136,7 +136,7 @@ def agentic_reinforcement_merge_extract_unique(base_sd, task_vecs, target_index,
 
 def agentic_reinforcement_merge_ties(base_sd, task_vecs, threshold=1e-5):
     n = len(task_vecs)
-    assert n >= 1, "需要至少一个任务向量"
+    assert n >= 1, "task_sds at least one model"
 
     param_value_mask_rate = 0.9
     scaling_coefficient = 1.0
@@ -225,7 +225,7 @@ def agentic_reinforcement_merge_ties(base_sd, task_vecs, threshold=1e-5):
 
 def agentic_reinforcement_merge(base_sd, task_vecs, threshold=1e-5):
     n = len(task_vecs)
-    assert n >= 1, "需要至少一个任务向量"
+    assert n >= 1, "task_sds at least one model"
 
     merged_sd = {}
 
@@ -344,7 +344,7 @@ def agentic_reinforcement_merge_rescale(base_sd, task_vecs, threshold=1e-5, r=1.
 
 def agentic_reinforcement_merge_rescale_v2(base_sd, task_vecs, threshold=1e-5, r=1.1):
     n = len(task_vecs)
-    assert n >= 1, "需要至少一个任务向量"
+    assert n >= 1, "task_sds at least one model"
 
     r = float(r)
     if r <= 1.0:
