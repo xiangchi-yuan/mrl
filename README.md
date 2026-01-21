@@ -11,4 +11,4 @@ pip install torch transformers
 
 ## Overview of RAM
 
-<img src="intro.png" width="130%" alt="RAM Framework">
+<img src="intro.png" width="150%" alt="RAM Framework">
