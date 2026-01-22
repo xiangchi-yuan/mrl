@@ -8,6 +8,26 @@ Ensure you have the following Python libraries installed:
 ```bash
 pip install torch transformers
 ```
+## 🚀 Run RAM Merging
+
+To execute the **RAM+** merging strategy, run the following command. This will merge the default coding, tool-use, and memory agents into the base model.
+
+```bash
+python main.py \
+    --merge_mode "arm-r-v2" \
+    --rescale_factor 1.2 \
+    --threshold 1e-5 \
+    --output_dir "./MergedModel"
+
+To execute the **RAM** merging strategy, set rescale_factor=1.2.
+
+```bash
+python main.py \
+    --merge_mode "arm-r-v2" \
+    --rescale_factor 1.0 \
+    --threshold 1e-5 \
+    --output_dir "./MergedModel"
+
 
 ## Evaluation
 
