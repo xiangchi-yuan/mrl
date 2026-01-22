@@ -8,7 +8,7 @@ Ensure you have the following Python libraries installed:
 ```bash
 pip install torch transformers
 ```
-## 🚀 Run RAM Merging
+## Run RAM Merging
 
 To execute the **RAM+** merging strategy, run the following command. This will merge the default coding, tool-use, and memory agents into the base model.
 
