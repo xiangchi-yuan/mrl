@@ -19,7 +19,7 @@ python main.py \
     --threshold 1e-5 \
     --output_dir "./MergedModel"
 ```
-To execute the **RAM** merging strategy, set rescale_factor=1.2.
+To execute the **RAM** merging strategy, set rescale_factor=1.0.
 
 ```bash
 python main.py \
