@@ -1,4 +1,4 @@
-# Reinforced Agentic Model Merge (RAM)
+# [ACL'26] Behavior Knowledge Merge in Reinforced Agentic Models
 
 
 ## Requirements
